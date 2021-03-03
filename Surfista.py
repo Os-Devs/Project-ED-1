@@ -1,5 +1,5 @@
-from Prancha import Prancha
-from Campeonato import Campeonato
+from Prancha import *
+from Campeonato import *
 
 class Surfista:
 	def __init__(self, nome, idade, campeonatos = [], pranchas = []):

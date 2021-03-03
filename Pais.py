@@ -1,4 +1,4 @@
-from Praia import Praias
+from Praia import *
 
 class Pais:
 	def __init__(self, nome, lingua, praias = []):
