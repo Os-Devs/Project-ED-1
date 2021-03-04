@@ -48,9 +48,10 @@ class Campeonato:
 	
 	def __str__ (self):
 
-		print(f'Nome do campeonato: {self._nome_campeonato}\nNome do campeão: {self._campeao}'
+		print (f'Nome do campeonato: {self._nome_campeonato}\nNome do campeão: {self._campeao}'
 		f'\nPraia: {self._praia}\nPrêmio: R$ {self._premio:.2f}')
 
 		for i in range (len(self._surfistas)):
 			print(f'{self._surfistas[i]}')
-      
+    	
+		return str(self._surfistas[i])
