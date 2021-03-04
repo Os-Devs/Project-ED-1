@@ -1,6 +1,3 @@
-from Prancha import *
-from Campeonato import *
-
 class Surfista:
 	def __init__(self, nome, idade, campeonatos = [], pranchas = []):
 		self._nome = str(nome)
@@ -24,9 +21,6 @@ class Surfista:
 	def idade_surfista(self, idade_surfista):
 		self._idade = idade_surfista
 
-	def surfista_camps(self):
-		return self._campeonatos
-
-	def prancha_surfista(self):
-		return self._pranchas
-
+	def __str__(self):
+		return (f'Nome: {self._nome}\nIdade: {self._idade}')
+		

@@ -22,3 +22,7 @@ class Praias:
 
 	def pais (self, pais):
 		self._pais = pais
+	
+	def __str__(self):
+	 	return (f'Nome da praia: {self._nome}\nNúmero de campeonatos realizados na praia: {self._numeros_camps_realizados}'
+	 	f'Praia fica em {self._pais}')

@@ -1,10 +1,8 @@
-from Praia import *
-
 class Pais:
 	def __init__(self, nome, lingua, praias = []):
 		self._nome = nome
 		self._lingua = lingua
-		self._praias = praias
+		#self._praias = praias
 
 	@property
 	def nome_do_pais (self):
@@ -22,9 +20,8 @@ class Pais:
 	def linguas (self, linguas):
 		self._lingua = linguas
 
-	def praias_pais (self):
-		return self._praias
+	# def praias_pais (self):
+	# 	return self._praias
 
 	def __str__ (self):
-		return (f'Nome: {self._nome}\nLíngua: {self._lingua}\nPraias: {self._praias}')
-    
+		return (f'País: {self._nome}\nLíngua: {self._lingua}')

@@ -1,12 +1,10 @@
-from Surfista import *
-
 class Campeonato:
-	def __init__ (self, nome_campeonato, campeao, praia, premio, surfistas):
+	def __init__ (self, nome_campeonato, campeao, praia, premio, surfistas = []):
 		self._nome_campeonato = str(nome_campeonato)
 		self._campeao = str(campeao)
 		self._praia = str(praia)
 		self._premio = float(premio)
-		self._surfistas = str(surfistas)
+		self._surfistas = surfistas
 
 	@property
 	def nome_do_campeonato (self):
@@ -39,12 +37,20 @@ class Campeonato:
 	@premio_campeonato.setter
 	def premio_campeonato (self, premio_campeonato):
 		self._premio = premio_campeonato
-
+	
 	@property
-	def surfistas_do_campeonato (self):
+	def surfista (self):
 		return self._surfistas
+	
+	@surfista.setter
+	def surfista (self, surfista):
+		self._surfistas.append(surfista)
+	
+	def __str__ (self):
 
-	@surfistas_do_campeonato.setter
-	def surfistas_do_campeonato (self, surfistas_do_campeonato):
-		self._surfistas = surfistas_do_campeonato
+		print(f'Nome do campeonato: {self._nome_campeonato}\nNome do campeão: {self._campeao}'
+		f'\nPraia: {self._praia}\nPrêmio: R$ {self._premio:.2f}')
+
+		for i in range (len(self._surfistas)):
+			print(f'{self._surfistas[i]}')
       

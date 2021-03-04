@@ -47,4 +47,5 @@ class Prancha:
         self._fabricacao = fabricacao
     
     def __str__(self):
-        return (f'Marca {self._marca}\nComprimento: {self._comprimento} m\nCor: {self._cor}\nValor: R$ {self._valor}\nPaís de fabricação: {self._fabricacao}')
+        return (f'Marca {self._marca}\nComprimento: {self._comprimento} m\nCor: {self._cor}'
+        f'\nValor: R$ {self._valor}\nPaís de fabricação: {self._fabricacao}')
