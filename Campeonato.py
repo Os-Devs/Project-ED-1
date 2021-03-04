@@ -45,7 +45,21 @@ class Campeonato:
 	@surfista.setter
 	def surfista (self, surfista):
 		self._surfistas.append(surfista)
-	
+
+	def menor_idade(self):
+		idade_min = 99
+		for i in range(len(self._surfistas)):
+			if (self._surfistas[i].idade_surfista < idade_min):
+					idade_min = (self._surfistas[i].idade_surfista)
+		return idade_min
+
+	def maior_idade(self):
+		idade_max = 0
+		for i in range(len(self._surfistas)):
+			if (self._surfistas[i].idade_surfista > idade_max):
+					idade_max = (self._surfistas[i].idade_surfista)
+		return idade_max
+
 	def __str__ (self):
 
 		print(f'Nome do campeonato: {self._nome_campeonato}\nNome do campeão: {self._campeao}'
@@ -53,9 +67,5 @@ class Campeonato:
 
 		for i in range (len(self._surfistas)):
 			print(f'{self._surfistas[i]}')
-<<<<<<< Updated upstream
-      
-=======
     	
 		return str()
->>>>>>> Stashed changes

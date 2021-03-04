@@ -23,6 +23,18 @@ class Praias:
 	def pais (self, pais):
 		self._pais = pais
 	
+	def praias_pais (self, quant):
+        praias_pais = ''
+        for i in range(len(self._praias)):
+            if (self._praias[i].num_camps >= quant):
+                praias_pais += self._praias[i].nome_praias
+
+        return praias_pais
+
 	def __str__(self):
-	 	return (f'Nome da praia: {self._nome}\nNúmero de campeonatos realizados na praia: {self._numeros_camps_realizados}'
-	 	f'Praia fica em {self._pais}')
+        print(f'País: {self._nome}\nLíngua: {self._lingua}')
+
+        for i in range (len(self._praias)):
+            print(f'{self._praias[i]}')
+        
+        return str()
