@@ -21,6 +21,37 @@ class Surfista:
 	def idade_surfista(self, idade_surfista):
 		self._idade = idade_surfista
 
+<<<<<<< Updated upstream
+=======
+	def totalganho(self):
+		total = 0
+		for i in range(len(self._campeonatos)):
+			if (self._campeonatos[i]._campeao == self._nome):
+				total += self._campeonatos[i]._premio
+		return total		
+
+	def pranchas_marca(self, marca):
+		for i in range(len(self._pranchas)):
+			if (self._pranchas[i] in marca):
+				print(self._pranchas[i])
+
+	def campeonatos(self):
+		total_camp = ''
+		for i in range(len(self._campeonatos)):
+			if (self._campeonatos[i]._campeao == self._nome):
+				total_camp += (f'\n{self._campeonatos[i].nome_do_campeonato}')
+		return total_camp
+
+>>>>>>> Stashed changes
 	def __str__(self):
-		return (f'Nome: {self._nome}\nIdade: {self._idade}')
+		print(f'Nome: {self._nome}\nIdade: {self._idade}')
+
+		for i in range (len(self._campeonatos)):
+			print(f'{self._campeonatos[i]}')
+
+		for i in range (len(self._pranchas)):
+			print(f'{self._pranchas[i]}')
+
+		return str()
+
 		

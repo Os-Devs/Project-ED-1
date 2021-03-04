@@ -6,10 +6,25 @@ from Surfista import Surfista
 
 if __name__ == '__main__':
     lista_surfistas = []
-    camp1 = Campeonato('World Wave', 'John', 'Barramas', 2450, lista_surfistas)
-    s1 = Surfista('John', 21)
-    s2 = Surfista('Alef', 22)
-    lista_surfistas.append(s1)
-    lista_surfistas.append(s2)
+    lista_pranchas = []
+    lista_pranchas = []
+    lista_campeonato = []
 
-    print(camp1)
+    s1 = Surfista('John', 21, lista_campeonato, lista_pranchas)
+    s2 = Surfista('Alef', 22)
+
+    camp1 = Campeonato('World Wave', s1._nome, 'Barramas', 2450)
+    camp2 = Campeonato('Shake Wave', s2._nome, 'Hawai', 2600)
+    camp3 = Campeonato('Miami Wave', s1._nome, 'Bahia', 3000)
+
+    
+    p1 = Prancha('Fireside', '2.03', 'Azul', 5000, 'Suiça')
+
+    lista_campeonato.append(camp1)
+    lista_campeonato.append(camp2)
+    lista_campeonato.append(camp3)
+
+    lista_pranchas.append(p1)
+
+    print(s1)
+    print(s1.campeonatos())

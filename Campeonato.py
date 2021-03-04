@@ -53,4 +53,9 @@ class Campeonato:
 
 		for i in range (len(self._surfistas)):
 			print(f'{self._surfistas[i]}')
+<<<<<<< Updated upstream
       
+=======
+    	
+		return str()
+>>>>>>> Stashed changes
