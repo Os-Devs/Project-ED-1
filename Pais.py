@@ -2,7 +2,7 @@ class Pais:
 	def __init__(self, nome, lingua, praias = []):
 		self._nome = nome
 		self._lingua = lingua
-		#self._praias = praias
+		self._praias = praias
 
 	@property
 	def nome_do_pais (self):
@@ -20,8 +20,13 @@ class Pais:
 	def linguas (self, linguas):
 		self._lingua = linguas
 
-	# def praias_pais (self):
-	# 	return self._praias
+	def praias_pais (self, quant):
+		praias_pais = ''
+		for i in range(len(self._praias)):
+			if (self._praias[i].num_camps >= quant):
+				praias_pais += self._praias[i].nome_praias
+
+		return praias_pais
 
 	def __str__ (self):
 		return (f'País: {self._nome}\nLíngua: {self._lingua}')

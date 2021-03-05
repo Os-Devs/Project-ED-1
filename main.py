@@ -5,6 +5,7 @@ from Prancha import Prancha
 from Surfista import Surfista
 
 if __name__ == '__main__':
+    
     lista_surfistas = []
     lista_pranchas = []
     lista_pranchas = []
