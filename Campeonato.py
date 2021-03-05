@@ -39,12 +39,8 @@ class Campeonato:
 		self._premio = premio_campeonato
 	
 	@property
-	def surfista (self):
+	def surfista(self):
 		return self._surfistas
-	
-	@surfista.setter
-	def surfista (self, surfista):
-		self._surfistas.append(surfista)
 
 	def menor_idade(self):
 		idade_min = 99
@@ -63,7 +59,8 @@ class Campeonato:
 	def __str__ (self):
 
 		print(f'Nome do campeonato: {self._nome_campeonato}\nNome do campeão: {self._campeao}'
-		f'\nPraia: {self._praia}\nPrêmio: R$ {self._premio:.2f}')
+		f'\nPraia: {self._praia}\nPrêmio: R$ {self._premio:.2f}\n'
+		f'\nSurfistas =>\n')
 
 		for i in range (len(self._surfistas)):
 			print(f'{self._surfistas[i]}')
