@@ -29,9 +29,11 @@ class Surfista:
 		return total		
 
 	def pranchas_marca(self, marca):
+		total_pranchas = ''
 		for i in range(len(self._pranchas)):
-			if (self._pranchas[i] in marca):
-				print(self._pranchas[i])
+			if (self._pranchas[i].marca_prancha == marca):
+				total_pranchas += (f'\n{self._pranchas[i]}\n')
+		return str(total_pranchas)
 
 	def campeonatos(self):
 		total_camp = ''

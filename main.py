@@ -10,23 +10,25 @@ if __name__ == '__main__':
     lista_pranchas = []
     lista_campeonato = []
 
-    s1 = Surfista('John', 21) #lista_campeonato, lista_pranchas)
+    s1 = Surfista('John', 21,lista_campeonato, lista_pranchas)
     s2 = Surfista('Alef', 22)
 
-    camp1 = Campeonato('World Wave', s1._nome, 'Barramas', 2450, lista_surfistas)
+    camp1 = Campeonato('World Wave', s1._nome, 'Barramas', 2450)
     camp2 = Campeonato('Shake Wave', s2._nome, 'Hawai', 2600)
     camp3 = Campeonato('Miami Wave', s1._nome, 'Bahia', 3000)
 
     
     p1 = Prancha('Fireside', 2.03, 'Azul', 5000, 'Suiça')
+    p2 = Prancha('Fireside', 2.6, 'Vermelho', 6000, 'China')
 
     lista_campeonato.append(camp1)
     lista_campeonato.append(camp2)
     lista_campeonato.append(camp3)
 
     lista_pranchas.append(p1)
+    lista_pranchas.append(p2)
     lista_surfistas.append(s1)
     lista_surfistas.append(s2)
 
-    print(camp1)
-    print(camp1.maior_idade())
+    print(s1)
+    print(s1.pranchas_marca('Fireside'))
