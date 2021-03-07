@@ -7,43 +7,43 @@ class Prancha:
         self._fabricacao = str(fabricacao)
     
     @property
-    def marca_prancha (self):
+    def marca_prancha(self):
         return self._marca
     
     @marca_prancha.setter
-    def marca_prancha (self, prancha):
+    def marca_prancha(self, prancha):
         self._marca = prancha
     
     @property
-    def comprimento_prancha (self):
+    def comprimento_prancha(self):
 	    return self._comprimento
         
     @comprimento_prancha.setter
-    def comprimento_prancha (self, comprimento):
+    def comprimento_prancha(self, comprimento):
         self._comprimento = comprimento
     
     @property
-    def cor_prancha (self):
+    def cor_prancha(self):
         return self._cor
     
     @cor_prancha.setter
-    def cor_prancha (self, cor):
+    def cor_prancha(self, cor):
         self._cor = cor
     
     @property
-    def valor_prancha (self):
+    def valor_prancha(self):
         return self._valor
     
     @valor_prancha.setter
-    def valor_prancha (self, valor):
+    def valor_prancha(self, valor):
         self._valor = valor
     
     @property
-    def fabricacao_prancha (self):
+    def fabricacao_prancha(self):
         return self._fabricacao
     
     @fabricacao_prancha.setter
-    def fabricacao_prancha (self, fabricacao):
+    def fabricacao_prancha(self, fabricacao):
         self._fabricacao = fabricacao
     
     def __str__(self):
