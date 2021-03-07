@@ -16,3 +16,28 @@ if __name__ == '__main__':
     s1.campeonatos.append(camp2)
 
     print(s1)
+
+
+    def imprimeMenu():
+        print(f'''
+                   ALOHA!
+        ----------------------------
+        | BEM VINDO AO WORLD WAVE  |
+        ----------------------------
+        |      MENU DE ACESSO      |
+        ----------------------------
+        |  [1] Cadastro Surfista   |
+        |  [2] Cadastro Pranchas   |
+        |  [3]    Países Sedes     |
+        |  [4]      Praias         |
+        |  [5]    Campeonato       |
+        |  [6]       SAIR          |\n''')
+
+
+
+    while(True):
+        imprimeMenu()
+        interacao = input('Digite qual opção você deseja acessar: ')
+        
+        break
+    
