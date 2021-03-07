@@ -78,12 +78,11 @@ class Surfista:
 				total += self._campeonatos[i].premio_campeonato
 		return total
 
-	def campeonatos_ganhos(self):
-		total_camp = ''
+	def campeonatos_participados(self):
+		participou = ''
 		for i in range(len(self._campeonatos)):
-			if (self._campeonatos[i]._campeao == self._nome):
-				total_camp += (f'\n{self._campeonatos[i].nome_do_campeonato}')
-		return total_camp
+			participou += (f'\n{self._campeonatos[i].nome_do_campeonato}')
+		return participou
 
 	def pranchas_marca(self, marca):
 		total_pranchas = ''
@@ -110,12 +109,7 @@ class Surfista:
 		return recomendacao
 
 	def __str__(self):
-		output_surfista = (f'\nNome: {self._nome}\nIdade: {self._idade}')
-
-		for i in range (len(self._campeonatos)):
-			output_surfista += (f'\n{self._campeonatos[i]}')
-
-		for i in range (len(self._pranchas)):
-			output_surfista += (f'\n{self._pranchas[i]}')
+		output_surfista = (f'\nNome: {self._nome}\nIdade: {self._idade}\nPeso: {self._peso}Kg'
+		f'Altura: {self._altura}m')
 
 		return output_surfista

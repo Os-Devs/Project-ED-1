@@ -28,18 +28,15 @@ class Pais:
 	def praias(self, praias):
 		self.praias.append(praias)
 
-	def praias_pais(self, quant):
-		praias_pais = ''
+	def praias_selecionadas(self, quant):
+		praias_selecionadas = []
 		for i in range(len(self._praias)):
 			if (self._praias[i].num_camps >= quant):
-				praias_pais += self._praias[i].nome_praias
+				praias_selecionadas += self._praias[i].nome_praias
 
-		return praias_pais
+		return praias_selecionadas
 
 	def __str__(self):
 		output_pais = (f'\nPaís: {self._nome}\nLíngua: {self._lingua}')
-
-		for i in range(len(self._praias)):
-			output_pais += (f'\n{self._praias[i]}')
 	
 		return output_pais

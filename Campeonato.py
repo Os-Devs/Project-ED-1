@@ -42,11 +42,11 @@ class Campeonato:
 		self._premio = premio_campeonato
 	
 	@property
-	def surfista(self):
+	def surfistas(self):
 		return self._surfistas
 	
-	@surfista.setter
-	def surfista(self, surfistas):
+	@surfistas.setter
+	def surfistas(self, surfistas):
 		self._surfistas.append(surfistas)
 
 	@property
@@ -61,31 +61,34 @@ class Campeonato:
 		idade_min = 99
 		for i in range(len(self._surfistas)):
 			if (self._surfistas[i].idade_surfista < idade_min):
-					idade_min = (self._surfistas[i].idade_surfista)
+				idade_min = (self._surfistas[i].idade_surfista)
 		return idade_min
 
 	def maior_idade(self):
 		idade_max = 0
 		for i in range(len(self._surfistas)):
 			if (self._surfistas[i].idade_surfista > idade_max):
-					idade_max = (self._surfistas[i].idade_surfista)
+				idade_max = (self._surfistas[i].idade_surfista)
 		return idade_max
 
 	def datas_camps(self, datas):
 		datas_camps = []
 
 		for i in range(len(self._datas)):
-			if (date.today() < self._datas[i]):
-				datas_camps.append(self._datas)
+			if (date.today() < datas):
+				datas_camps.append(datas)
 		
 		return datas_camps
+	
+	def participantes(self):
+		participantes = ''
+		for i in range(len(self._surfistas)):
+			participantes += (f'\n{self._surfistas[i].nome_surfista}')
 		
+		return participantes
 
 	def __str__(self):
 		output_campeonato = (f'\nNome do campeonato: {self._nome_campeonato}\nNome do campeão: {self._campeao}'
 		f'\nPraia: {self._praia}\nPrêmio: R$ {self._premio:.2f}')
-
-		for i in range (len(self._surfistas)):
-			output_campeonato += (f'{self._surfistas[i]}')
     	
 		return output_campeonato
