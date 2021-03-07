@@ -2,8 +2,8 @@ class Surfista:
 	def __init__(self, nome, idade, peso, altura):
 		self._nome = str(nome)
 		self._idade = int(idade)
-		self._peso = peso
-		self._altura = altura
+		self._peso = float(peso)
+		self._altura = float(altura)
 		self._campeonatos = []
 		self._pranchas = []
 
@@ -54,6 +54,22 @@ class Surfista:
 	@pranchas.setter
 	def pranchas(self, pranchas):
 		self._pranchas.append(pranchas)
+
+	@property
+	def peso(self):
+		return self._peso 
+	
+	@peso.setter
+	def peso(self, peso):
+		self._peso = peso
+
+	@property
+	def altura(self):
+		return self._altura
+	
+	@altura.setter
+	def altura(self, altura):
+		self._altura = altura
 
 	def total_ganho(self):
 		total = 0
