@@ -2,8 +2,8 @@ class Surfista:
 	def __init__(self, nome, idade, peso, altura):
 		self._nome = str(nome)
 		self._idade = int(idade)
-		self._peso = peso
-		self._altura = altura
+		self._peso = float(peso)
+		self._altura = float(altura)
 		self._campeonatos = []
 		self._pranchas = []
 
