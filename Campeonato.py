@@ -1,3 +1,5 @@
+from datetime import date
+
 class Campeonato:
 	def __init__(self, nome_campeonato, campeao, praia, premio):
 		self._nome_campeonato = str(nome_campeonato)
@@ -5,6 +7,7 @@ class Campeonato:
 		self._praia = str(praia)
 		self._premio = float(premio)
 		self._surfistas = []
+		self._datas_camps = []
 
 	@property
 	def nome_do_campeonato(self):
@@ -45,6 +48,14 @@ class Campeonato:
 	@surfista.setter
 	def surfista(self, surfistas):
 		self._surfistas.append(surfistas)
+
+	@property
+	def data(self):
+		return self._datas_camps
+	
+	@data.setter
+	def data(self, data):
+		self._data.append(data)
 
 	def menor_idade(self):
 		idade_min = 99

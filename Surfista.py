@@ -2,6 +2,8 @@ class Surfista:
 	def __init__(self, nome, idade, peso, altura):
 		self._nome = str(nome)
 		self._idade = int(idade)
+		self._peso = peso
+		self._altura = altura
 		self._campeonatos = []
 		self._pranchas = []
 
@@ -20,6 +22,22 @@ class Surfista:
 	@idade_surfista.setter
 	def idade_surfista(self, idade_surfista):
 		self._idade = idade_surfista
+
+	@property
+	def altura(self):
+		return self._altura
+	
+	@altura.setter
+	def altura(self, altura):
+		self._altura = altura
+
+	@property
+	def peso(self):
+		return self._peso
+	
+	@peso.setter
+	def peso(self, peso):
+		self._peso = peso
 	
 	@property
 	def campeonatos(self):
@@ -59,7 +77,21 @@ class Surfista:
 		return str(total_pranchas)
 	
 	def recomendacao(self):
-		pass
+		if (self._peso < 60):
+			recomendacao = (f'Volume Ideal: Em torno dos 40L')
+		elif (self._peso >= 60 and self._peso < 80):
+			recomendacao = (f'Volume Ideal: Entre 42L e 48L')
+		else:
+			recomendacao = (f'Volume Ideal: Mais de 48L')
+
+		if (self._altura < 1.60):
+			recomendacao += (f'\nTamanho Ideal: Menor que 7´0"')
+		elif (self._altura >= 1.60 and self._altura < 1.80):
+			recomendacao += (f'\nTamanho Ideal: Entre 7´0" e 7´8"')
+		else:
+			recomendacao += (f'\nTamanho Ideal: Maior ou igual a 7´8"')
+		
+		return recomendacao
 
 	def __str__(self):
 		output_surfista = (f'\nNome: {self._nome}\nIdade: {self._idade}')
@@ -68,6 +100,6 @@ class Surfista:
 			output_surfista += (f'\n{self._campeonatos[i]}')
 
 		for i in range (len(self._pranchas)):
-			output_surfista += (f'{self._pranchas[i]}')
+			output_surfista += (f'\n{self._pranchas[i]}')
 
 		return output_surfista

@@ -37,9 +37,9 @@ class Pais:
 		return praias_pais
 
 	def __str__(self):
-		print(f'País: {self._nome}\nLíngua: {self._lingua}')
+		output_pais = (f'\nPaís: {self._nome}\nLíngua: {self._lingua}')
 
 		for i in range(len(self._praias)):
-			print(f'{self._praias[i]}')
+			output_pais += (f'\n{self._praias[i]}')
 	
-		return ''
+		return output_pais
