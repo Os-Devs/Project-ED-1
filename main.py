@@ -3,6 +3,7 @@ from Pais import Pais
 from Praia import Praias
 from Prancha import Prancha
 from Surfista import Surfista
+from datetime import date
 
 if __name__ == '__main__':
 
