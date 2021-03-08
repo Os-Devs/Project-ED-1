@@ -1,8 +1,8 @@
 class Praias:
-	def __init__(self, nome, num_camps_realizados, pais):
+	def __init__(self, nome, num_camps_realizados):
 		self._nome = str(nome)
 		self._numeros_camps_realizados = int(num_camps_realizados)
-		self._pais = str(pais)
+		self._pais = []
 
 	@property
 	def nome_praias(self):

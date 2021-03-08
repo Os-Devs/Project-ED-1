@@ -83,9 +83,10 @@ class Campeonato:
 		return datas_camps
 	
 	def participantes(self):
-		participantes = ''
+		participantes = self._campeao
 		for i in range(len(self._surfistas)):
-			participantes += (f'\n{self._surfistas[i].nome_surfista}')
+			if (self._surfistas[i].nome_surfista != self._campeao):
+				participantes += (f'\n{self._surfistas[i].nome_surfista}')
 		
 		return participantes
 

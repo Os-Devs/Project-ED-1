@@ -87,8 +87,8 @@ class Surfista:
 	def pranchas_marca(self, marca):
 		total_pranchas = ''
 		for i in range(len(self._pranchas)):
-			if (self._pranchas[i].marca_prancha == marca):
-				total_pranchas += (f'\n{self._pranchas[i]}\n')
+			if (marca in self._pranchas[i].marca_prancha):
+				total_pranchas += (f'\n{self._pranchas[i]}')
 		return total_pranchas
 	
 	def recomendacao(self):
@@ -110,6 +110,6 @@ class Surfista:
 
 	def __str__(self):
 		output_surfista = (f'\nNome: {self._nome}\nIdade: {self._idade}\nPeso: {self._peso}Kg'
-		f'Altura: {self._altura}m')
+		f'\nAltura: {self._altura}m')
 
 		return output_surfista
