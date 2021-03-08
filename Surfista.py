@@ -89,7 +89,7 @@ class Surfista:
 		for i in range(len(self._pranchas)):
 			if (self._pranchas[i].marca_prancha == marca):
 				total_pranchas += (f'\n{self._pranchas[i]}\n')
-		return str(total_pranchas)
+		return total_pranchas
 	
 	def recomendacao(self):
 		if (self._peso < 60):

@@ -72,11 +72,11 @@ class Campeonato:
 		return idade_max
 
 	def datas_camps(self, datas):
-		datas_camps = []
+		datas_camps = ''
 
 		for i in range(len(self._datas)):
 			if (date.today() < datas):
-				datas_camps.append(datas)
+				datas_camps += datas
 		
 		return datas_camps
 	

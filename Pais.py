@@ -22,14 +22,14 @@ class Pais:
 
 	@property
 	def praias(self):
-		return self._lingua
+		return self._praias
 
 	@praias.setter
 	def praias(self, praias):
 		self.praias.append(praias)
 
 	def praias_selecionadas(self, quant):
-		praias_selecionadas = []
+		praias_selecionadas = ''
 		for i in range(len(self._praias)):
 			if (self._praias[i].num_camps >= quant):
 				praias_selecionadas += self._praias[i].nome_praias
