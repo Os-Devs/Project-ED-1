@@ -10,6 +10,7 @@ if __name__ == '__main__':
     lista_campeonatos = []
     lista_surfistas = []
     lista_praias = []
+    lista_surfistas = []
 
     def imprimeMenu():
         print(f'''
@@ -25,14 +26,14 @@ if __name__ == '__main__':
         |  [4]     Acesso Camps    |
         |  [5]     Datas Camps     |
         |  [6]   Busca Pranchas    |
-        |  [0]       SAIR          |\n''')
+        |  [7]       SAIR          |\n''')
 
     
+    interacao = 0
 
-    imprimeMenu()
-    interacao = int(input('Digite qual opção você deseja acessar: '))
-    while(interacao != 0):
-
+    while(interacao != 7):
+        imprimeMenu()
+        interacao = int(input('Digite qual opção você deseja acessar: '))
         if (interacao == 1):
             print('\nCadastro de Surfistas\n')
             name_surfista = input('Insira seu nome: ')
@@ -42,8 +43,9 @@ if __name__ == '__main__':
             cadastro_surfista = Surfista(name_surfista, IdadeSurfista, peso_surfista, altura_surfista)
             lista_surfistas.append(cadastro_surfista)
             cadastro_surfista.campeonatos.append(lista_campeonatos)
+            lista_campeonatos.append(cadastro_surfista)
             print('Cadastro Realizado com Sucesso!')
-
+ 
             pro = input('\nVocê é um Surfista Profissional? S/N: ').upper()
             if (pro == 'N'):
                 recomend = input('\nDeseja receber recomendações de pranchas? S/N: ').upper()
@@ -92,9 +94,8 @@ if __name__ == '__main__':
                     cadastro_camp = Campeonato(nome_camp, nome_campeao, praia_camp, premio_camp)
                     lista_campeonatos.append(cadastro_camp)
                 print(f'\nCadastro do Campeonato {nome_camp} Realizado com Sucesso!')
-            
-                print('Fim do Cadastro')
-            
+
+        
         elif (interacao == 4):
             for i in range(len(lista_campeonatos)):
                 print(f'{lista_campeonatos[i]}')
