@@ -11,6 +11,7 @@ if __name__ == '__main__':
     lista_Pranchas = []
     lista_Surfistas = []
     lista_Praias = []
+    lista_Datas = []
     lista_Pais = []
 
     surfsNome = ['John', 'Abner','Vinicius','Alef','Eduardo','Italo','Mael']
@@ -107,6 +108,29 @@ if __name__ == '__main__':
     lista_Pranchas.append(prancha6)
     lista_Pranchas.append(prancha7)
 
+    data1 = date(2018, 7, 8)
+    data2 = date(2017, 5, 23)
+    data3 = date(2021, 3, 9)
+    data4 = date(2021, 5, 12)
+    data5 = date(2021, 3, 7)
+    data6 = date(2021, 4, 10)
+    data7 = date(2021, 3, 25)
+
+    lista_Datas.append(data1)
+    lista_Datas.append(data2)
+    lista_Datas.append(data3)
+    lista_Datas.append(data4)
+    lista_Datas.append(data5)
+    lista_Datas.append(data6)
+    lista_Datas.append(data7)
+
+    lista_Campeonatos[0].data.append(data1)
+    lista_Campeonatos[1].data.append(data2)
+    lista_Campeonatos[2].data.append(data3)
+    lista_Campeonatos[3].data.append(data4)
+    lista_Campeonatos[4].data.append(data5)
+    lista_Campeonatos[5].data.append(data6)
+    lista_Campeonatos[6].data.append(data7)
 
     lista_Campeonatos[0].surfistas.append(surfista1)
     lista_Campeonatos[0].surfistas.append(surfista2)
@@ -273,8 +297,6 @@ if __name__ == '__main__':
             pranchas = lista_Surfistas[i].pranchas_marca(marca)
 
         return pranchas
-    
-    print(buscar_pranchasSurfistas('Firewire'))
 
     lista_Pais[0].praias.append(praia1)
     lista_Pais[1].praias.append(praia2)
@@ -291,4 +313,11 @@ if __name__ == '__main__':
 
         return praia
 
-    print(praias_select(5))
+    def datas_campsOcorrerá ():
+        data = ''
+        for i in range(len(lista_Campeonatos)):
+            data += (f'\n{lista_Campeonatos[i].datas_camps()} \n{lista_Campeonatos[i].nome_do_campeonato}')
+        
+        return data
+
+    print(datas_campsOcorrerá())
