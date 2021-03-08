@@ -49,7 +49,7 @@ class Surfista:
 
 	@property
 	def pranchas(self):
-		return self._campeonatos
+		return self._pranchas
 	
 	@pranchas.setter
 	def pranchas(self, pranchas):
@@ -86,9 +86,11 @@ class Surfista:
 
 	def pranchas_marca(self, marca):
 		total_pranchas = ''
+
 		for i in range(len(self._pranchas)):
-			if (marca in self._pranchas[i].marca_prancha):
-				total_pranchas += (f'\n{self._pranchas[i]}')
+			if (self._pranchas[i].marca_prancha == marca):
+				total_pranchas += (f'{self._pranchas[i]}')
+
 		return total_pranchas
 	
 	def recomendacao(self):

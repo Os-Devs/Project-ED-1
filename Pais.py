@@ -32,7 +32,7 @@ class Pais:
 		praias_selecionadas = ''
 		for i in range(len(self._praias)):
 			if (self._praias[i].num_camps >= quant):
-				praias_selecionadas += self._praias[i].nome_praias
+				praias_selecionadas += (f' {self._praias[i].nome_praias} ')
 
 		return praias_selecionadas
 
