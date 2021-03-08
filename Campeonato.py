@@ -60,23 +60,25 @@ class Campeonato:
 	def menor_idade(self):
 		idade_min = 99
 		for i in range(len(self._surfistas)):
-			if (self._surfistas[i].idade_surfista < idade_min):
-				idade_min = (self._surfistas[i].idade_surfista)
+			if (self._campeao == self._surfistas[i].nome_surfista):
+				if (self._surfistas[i].idade_surfista < idade_min):
+					idade_min = (self._surfistas[i].idade_surfista)
 		return idade_min
 
 	def maior_idade(self):
 		idade_max = 0
 		for i in range(len(self._surfistas)):
-			if (self._surfistas[i].idade_surfista > idade_max):
-				idade_max = (self._surfistas[i].idade_surfista)
+			if (self._campeao == self._surfistas[i].nome_surfista):
+				if (self._surfistas[i].idade_surfista > idade_max):
+					idade_max = (self._surfistas[i].idade_surfista)
 		return idade_max
 
-	def datas_camps(self, datas):
+	def datas_camps(self):
 		datas_camps = ''
 
 		for i in range(len(self._datas)):
-			if (date.today() < datas):
-				datas_camps += datas
+			if (date.today() < self._datas[i]):
+				datas_camps += (f'\n{self._datas[i]}')
 		
 		return datas_camps
 	

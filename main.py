@@ -8,6 +8,7 @@ from datetime import date
 if __name__ == '__main__':
 
     lista_campeonatos = []
+    lista_surfistas = []
     lista_praias = []
 
     def imprimeMenu():
@@ -22,13 +23,16 @@ if __name__ == '__main__':
         |  [2]    Praias-Sedes     |
         |  [3]   Cadastrar Camps   |
         |  [4]     Acesso Camps    |
-        |  [5]       SAIR          |\n''')
+        |  [5]     Datas Camps     |
+        |  [6]   Busca Pranchas    |
+        |  [0]       SAIR          |\n''')
 
     
 
     imprimeMenu()
     interacao = int(input('Digite qual opção você deseja acessar: '))
-    while(interacao != 5):
+    while(interacao != 0):
+
         if (interacao == 1):
             print('\nCadastro de Surfistas\n')
             name_surfista = input('Insira seu nome: ')
@@ -36,6 +40,7 @@ if __name__ == '__main__':
             peso_surfista = float(input('Seu Peso KG: '))
             altura_surfista = float(input('Sua Altura: '))
             cadastro_surfista = Surfista(name_surfista, IdadeSurfista, peso_surfista, altura_surfista)
+            lista_surfistas.append(cadastro_surfista)
             cadastro_surfista.campeonatos.append(lista_campeonatos)
             print('Cadastro Realizado com Sucesso!')
 
@@ -55,8 +60,7 @@ if __name__ == '__main__':
             print('\nCadastro Realizado com Sucesso!')
             cadastro_surfista.pranchas.append(cadastro_pranchas)
 
-        imprimeMenu()
-        if (interacao == 2):
+        elif (interacao == 2):
             pergunta_add_paises = int(input('Há quantos países já foi à campeonato? '))
             for i in range(pergunta_add_paises):
                 nome_pais = str(input(f'Digite o nome do país: '))
@@ -73,8 +77,7 @@ if __name__ == '__main__':
             for i in range(len(lista_praias)):
                 print(f'{lista_praias[i].praias_selecionadas(filtro_praias)}')
 
-        imprimeMenu()
-        if (interacao == 3):
+        elif (interacao == 3):
             pergunta_add_camp = int(input('Quantos campeonatos você já participou? '))
             for i in range(pergunta_add_camp):
                 nome_camp = input('Nome do campeonato: ')
@@ -91,8 +94,28 @@ if __name__ == '__main__':
                 print(f'\nCadastro do Campeonato {nome_camp} Realizado com Sucesso!')
             
                 print('Fim do Cadastro')
-
-
-        if (interacao == 4):
+            
+        elif (interacao == 4):
             for i in range(len(lista_campeonatos)):
                 print(f'{lista_campeonatos[i]}')
+            
+            for i in range(len(lista_surfistas)):
+                print(f'{lista_surfistas[i].total_ganho()}')
+        
+        elif (interacao == 5):
+            for i in range(len(lista_campeonatos)):
+                print(f'{lista_campeonatos[i].datas_camps()}')
+                add_data_camp = int(input('Gostaria de adicionar a data de um campeonato(1-Sim ou 2-Não): '))
+                dia = int(input('Digite o dia: '))
+                mes = int(input('Digite o mês: '))
+                ano = int(input('Digite o ano: '))
+                data = date(ano, mes, dia)
+                qual_camp = str(input('Digite o nome do campeonato: '))
+                lista_campeonatos[i].data.append(data)
+
+                print(f'{lista_campeonatos[i].datas_camps()} - {qual_camp}')
+        
+        elif (interacao == 6):
+            for i in range(len(lista_surfistas)):
+                buscar_prancha = str(input('Digite o nome da prancha: '))
+                print(f'{lista_surfistas[i].pranchas_marca(buscar_prancha)}')
